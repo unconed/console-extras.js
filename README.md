@@ -8,18 +8,18 @@ Builds: `dist/console-extras.js` and `dist/console-extras.min.js`.
 Methods
 -------
 
-`console.times(n)`
+__console.times(n)__
 Limits the next call to `n` invocations.  
 e.g. `console.times(5).log("This message will only show up 5 times.")`.
 
-`console.throttle(n)`
+__console.throttle(n)__
 Throttles the next call to at most once every `n` milliseconds.  
 e.g. `console.throttle(1000).log("This message will only show up once per second.")`.
 
-`console.collate(...)`
+__console.collate(...)__
 Collects arbitrary data for summarization. Accepts numbers, strings, arrays, objects.
 
-`console.summary()`
+__console.summary()__
 Displays a summary of collated data: Average/stddev for numbers, unique string counts, objects by type, arrays by elements.
 
 
