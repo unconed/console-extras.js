@@ -55,7 +55,7 @@
           break;
 
         case 'object':
-          var name = value.prototype && value.prototype.constructor.name || 'Object';
+          var name = value.constructor && value.constructor.name || 'Object';
           type = stat.classes[name] || { count: 0, properties: {} };
           type.count++;
 
