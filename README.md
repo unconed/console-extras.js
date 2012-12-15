@@ -20,8 +20,7 @@ __console.collate(...)__
 Collects arbitrary data for summarization. Accepts numbers, strings, arrays, objects.
 
 __console.summary()__  
-Displays a summary of collated data: Average/stddev for numbers, unique string counts, objects by type, arrays by elements.
-
+Displays a summary of collated data: Average/stddev for numbers, unique string counts, objects by type, arrays by elements. Must be called in the same chain as `.collate()`.
 
 Examples
 -----
