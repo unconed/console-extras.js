@@ -26,7 +26,9 @@ Examples
 -----
 
 __Chaining__
+```
 console.times(5).throttle(1000).log("This message will be printed once per second, up to 5 times.")
+```
 
 __Collecting data in a live app__
 e.g.
