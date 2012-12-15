@@ -1,0 +1,14 @@
+{
+  "name": "console-extras",
+  "version": "0.1",
+  "description": "Enhancements to the JavaScript console object.",
+  "author": {
+    "name": "Steven Wittens",
+    "email": "steven@acko.net",
+    "url": "http://acko.net/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unconed/console-extras.js"
+  }
+}
