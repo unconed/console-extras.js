@@ -10,11 +10,19 @@ Methods
 
 __console.times(n)__  
 Limits the next call to `n` invocations.  
-e.g. `console.times(5).log("This message will only show up 5 times.")`.
+e.g.
+
+```javascript
+console.times(5).log("This message will only show up 5 times.")
+```
 
 __console.throttle(n)__  
 Throttles the next call to at most once every `n` milliseconds.  
-e.g. `console.throttle(1000).log("This message will only show up once per second.")`.
+e.g.
+
+```javascript
+console.throttle(1000).log("This message will only show up once per second.")
+```
 
 __console.collate(...)__  
 Collects arbitrary data for summarization. Accepts numbers, strings, arrays, objects.
@@ -26,13 +34,15 @@ Examples
 -----
 
 __Chaining__
-```
+
+```javascript
 console.times(5).throttle(1000).log("This message will be printed once per second, up to 5 times.")
 ```
 
 __Collecting data in a live app__
 e.g.
-```
+
+```javascript
 console
   .collate(1, "foo", { x: 1, y: 2 }, [ 1, 2 ])
   .collate(2, "bar", { x: 2, y: 4 }, [ 5, 4 ])
