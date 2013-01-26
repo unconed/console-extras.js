@@ -30,7 +30,8 @@
         if (count < this.__limit) {
           counts[id] = count + 1;
 
-          console[key].apply(this, arguments);
+          var that = console[key].consoleExtras ? this : console;
+          console[key].apply(that, arguments);
         }
       }
 
@@ -46,6 +47,7 @@
     ret.__throttle = this.__throttle || 0;
     return ret;
   };
+  console.times.consoleExtras = true;
 
   // Add .throttle() to console.
   console.throttle = function (time) {
@@ -55,5 +57,6 @@
     ret.__throttle = time;
     return ret;
   };
+  console.throttle.consoleExtras = true;
 
 })(console);

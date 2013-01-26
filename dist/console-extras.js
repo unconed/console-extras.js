@@ -1,5 +1,5 @@
-/*! console-extras - v0.1 - 2012-12-14
-* Copyright (c) 2012 Steven Wittens; Licensed  */
+/*! console-extras - v0.1 - 2013-01-26
+* Copyright (c) 2013 Steven Wittens; Licensed  */
 
 (function (console) {
 
@@ -63,7 +63,8 @@ console.__getCallID = function (skip) {
         if (count < this.__limit) {
           counts[id] = count + 1;
 
-          console[key].apply(this, arguments);
+          var that = console[key].consoleExtras ? this : console;
+          console[key].apply(that, arguments);
         }
       }
 
@@ -79,6 +80,7 @@ console.__getCallID = function (skip) {
     ret.__throttle = this.__throttle || 0;
     return ret;
   };
+  console.times.consoleExtras = true;
 
   // Add .throttle() to console.
   console.throttle = function (time) {
@@ -88,6 +90,7 @@ console.__getCallID = function (skip) {
     ret.__throttle = time;
     return ret;
   };
+  console.throttle.consoleExtras = true;
 
 })(console);
 
@@ -178,6 +181,7 @@ console.__getCallID = function (skip) {
     ret.__throttle = 0;
     return ret;
   };
+  console.collate.consoleExtras = true;
 
   // Summarize collated data
   console.summary = function () {
@@ -197,6 +201,7 @@ console.__getCallID = function (skip) {
       console.log(out.join("\n"));
     }.bind(this), 0);
   };
+  console.summary.consoleExtras = true;
 
   // Pretty printer for stats
   Stat.prototype.toOutput = function (prefix, name) {

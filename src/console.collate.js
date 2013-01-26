@@ -85,6 +85,7 @@
     ret.__throttle = 0;
     return ret;
   };
+  console.collate.consoleExtras = true;
 
   // Summarize collated data
   console.summary = function () {
@@ -104,6 +105,7 @@
       console.log(out.join("\n"));
     }.bind(this), 0);
   };
+  console.summary.consoleExtras = true;
 
   // Pretty printer for stats
   Stat.prototype.toOutput = function (prefix, name) {
